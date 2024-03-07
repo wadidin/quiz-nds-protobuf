@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "./;proto";
+
+message RequestKubus {
+  int32 Sisi =1;
+}
+
+message ResponseVolumeKubus {
+  int32 Volume =1;
+}
+
+service BangunRuang {
+  rpc HitungVolumeKubus(RequestKubus) returns (ResponseVolumeKubus);
+}

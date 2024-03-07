@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "./;proto";
+
+message RequestHitungUmur {
+    string TanggalLahir = 1;
+}
+
+message ResponseHitungUmur {
+    string Umur = 1;
+}
+
+service Umur {
+    rpc HitungUmur (RequestHitungUmur) returns (ResponseHitungUmur);
+}
